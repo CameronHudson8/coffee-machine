@@ -1,5 +1,7 @@
 package io.pivotal.coffeemachine.Inventories;
 
+import io.pivotal.coffeemachine.Drinks.Drink;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -46,6 +48,24 @@ public class CoffeeServiceInventory implements Inventory {
 
         this.ingredients.put(name, currentStock - amount);
 
+    }
+
+    /**
+     * Confirms or denies that the inventory has sufficient supplies to create the specified drink.
+     *
+     * @param drink the drink whose ingredients must be available
+     * @return false if the ingredients are unavailable, true otherwise
+     */
+    @Override
+    public boolean hasIngredientsFor(Drink drink) {
+
+        Map<String, Integer> drinkIngredients = drink.getIngredients();
+        for (String ingredientName : drinkIngredients.keySet()) {
+            if (this.ingredients.get(ingredientName) < drinkIngredients.get(ingredientName)) {
+                return false;
+            }
+        }
+        return true;
     }
 
 }

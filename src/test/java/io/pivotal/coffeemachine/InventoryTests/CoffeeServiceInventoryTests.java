@@ -6,11 +6,7 @@ import org.junit.Test;
 
 public class CoffeeServiceInventoryTests extends InventoryTests {
 
-    /**
-     * This is a factory method implementation.
-     */
     @Override
-    @Test
     protected Inventory getInventory() {
         return new CoffeeServiceInventory();
     }

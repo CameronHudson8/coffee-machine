@@ -27,14 +27,8 @@ public abstract class Drink {
 
     public abstract String getName();
 
-    public abstract void setName(String newName);
-
     public abstract Double getCost();
 
-    public abstract void setCost(Double newCost);
-
     public abstract Map<String, Integer> getIngredients();
-
-    public abstract void setIngredients(Map<String, Integer> newIngredients);
 
 }

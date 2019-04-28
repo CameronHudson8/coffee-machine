@@ -5,46 +5,29 @@ import java.util.Map;
 
 public class Cappuccino extends Drink {
 
-    protected static String name = "cappuccino";
-    protected static Double cost = 2.90;
+    public static final String NAME = "cappuccino";
+    public static final Double COST = 2.90;
 
     // TODO After upgrading to Java version 9+, refactor this to Map.ofEntries().
-    protected static Map<String, Integer> ingredients;
+    public static final Map<String, Integer> INGREDIENTS;
     static {
-        ingredients = new HashMap<>();
-        ingredients.put("coffee", 2);
-        ingredients.put("sugar", 1);
-        ingredients.put("cream", 2);
+        INGREDIENTS = new HashMap<>();
+        INGREDIENTS.put("coffee", 2);
+        INGREDIENTS.put("sugar", 1);
+        INGREDIENTS.put("cream", 1);
     }
 
     @Override
     public String getName() {
-        return name;
+        return NAME;
     }
 
     @Override
-    public void setName(String newName) {
-        name = newName;
-    }
-
-    @Override
-    public Double getCost() {
-        return cost;
-    }
-
-    @Override
-    public void setCost(Double newCost) {
-        cost = newCost;
-    }
+    public Double getCost() { return COST; }
 
     @Override
     public Map<String, Integer> getIngredients() {
-        return ingredients;
-    }
-
-    @Override
-    public void setIngredients(Map<String, Integer> newIngredients) {
-        ingredients = newIngredients;
+        return INGREDIENTS;
     }
 
 }
