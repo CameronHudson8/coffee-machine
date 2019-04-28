@@ -1,4 +1,6 @@
-package io.pivotal.coffeemachine;
+package io.pivotal.coffeemachine.Inventories;
+
+import io.pivotal.coffeemachine.Drinks.Drink;
 
 import java.util.Map;
 
@@ -18,4 +20,13 @@ public interface Inventory {
 	 * @param amount the quantity to reduce by
 	 */
 	void deduct(String name, Integer amount);
+
+	/**
+	 * Confirms or denies that the inventory has sufficient supplies to create the specified drink.
+	 *
+	 * @param drink the drink whose ingredients must be available
+	 * @return false if the ingredients are unavailable, true otherwise
+	 */
+	boolean hasIngredientsFor(Drink drink);
+
 }

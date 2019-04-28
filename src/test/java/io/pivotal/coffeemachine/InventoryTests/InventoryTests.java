@@ -1,7 +1,8 @@
-package io.pivotal.coffeemachine;
+package io.pivotal.coffeemachine.InventoryTests;
 
 import java.util.Map;
 
+import io.pivotal.coffeemachine.Inventories.Inventory;
 import org.junit.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
