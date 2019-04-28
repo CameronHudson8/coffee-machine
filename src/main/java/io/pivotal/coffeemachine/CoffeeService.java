@@ -1,5 +1,8 @@
 package io.pivotal.coffeemachine;
 
+import io.pivotal.coffeemachine.Drinks.Drink;
+import io.pivotal.coffeemachine.Inventories.Inventory;
+
 import java.util.Map;
 
 public class CoffeeService {

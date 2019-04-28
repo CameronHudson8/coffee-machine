@@ -2,6 +2,7 @@ package io.pivotal.coffeemachine;
 
 import java.util.Map;
 
+import io.pivotal.coffeemachine.Inventories.Inventory;
 import org.junit.Before;
 import org.junit.Test;
 

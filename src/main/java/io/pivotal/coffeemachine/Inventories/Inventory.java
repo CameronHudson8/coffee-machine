@@ -1,4 +1,4 @@
-package io.pivotal.coffeemachine;
+package io.pivotal.coffeemachine.Inventories;
 
 import java.util.Map;
 
